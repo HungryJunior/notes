@@ -21,4 +21,4 @@ logout           	        		- разорвать ssh-соединение
 vagrant sandbox on              	- режим песочницы     (Sahara)
 vagrant sandbox commit 				- сохранили изменения (Sahara)
 vagrant sandbox rollback            - откатили изменения  (Sahara)
-vagrant sandbox off                 - вишли из песочницы  (Sahara)
+vagrant sandbox off                 - вишли из песочницы  (Sahara) 

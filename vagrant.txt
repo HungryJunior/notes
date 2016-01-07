@@ -1,0 +1,17 @@
+!VirtualBox - сама€ последн€€ тестова€ верси€.
+!≈сли не запускаетс€ вм при vagrant up - переименовать файл uxtheme.dll.backup->uxtheme.dll ( C:\Windows\System32 )
+!„тоб≥ получить ssh доступ нужно ключ прогнать через puttyGen
+
+# омманды:
+
+vagrant init [boxName]          	- инициализировать vagrant [на основе бокса]
+vagrant up [boxName]                    - подн€ть вирт.машину.
+vagrant halt [boxName]                  - остановить вирт.машину
+vagrant destroy boxID           	- останавливает и удал€ет вирт.машину
+vagrant global-status [--prune] 	- информаци€ о всех вирт.машинах [удал€ет недействительные окружени€]
+vagrant box list                	- список сохраненых боксов
+vagrant box add boxName         	- добавить бокс (ubuntu/trusty64)
+vagrant box remove boxName         	- удалить бокс (ubuntu/trusty64)
+vagrant box update [--box boxName]	- обновл€ет бокс до актуальной версии
+vagrant ssh      	        	- ssh-соединение с вирт.машиной
+logout           	        	- разорвать ssh-соединение

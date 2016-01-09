@@ -1,24 +1,34 @@
-!VirtualBox - самая последняя тестовая версия.
-!Если не запускается вм при vagrant up - переименовать файл uxtheme.dll.backup->uxtheme.dll ( C:\Windows\System32 )
-!Чтобі получить ssh доступ нужно ключ прогнать через puttyGen
+РќР°РґСЃС‚СЂРѕР№РєР° РЅР°Рґ РІРёСЂС‚.РјР°С€РёРЅРѕР№.
+РџРѕР·РІРѕР»СЏРµС‚ СЃ РїРѕРјРѕС‰СЊСЋ Р·Р°СЂР°РЅРµРµ РїРѕРґРіРѕС‚РѕРІР»РµРЅРЅС‹С… РёРЅСЃС‚СЂСѓРєС†РёР№ СЂР°Р·РІРµСЂРЅСѓС‚СЊ РїРѕРґРѕР±РёРµ СЃРµСЂРІРµСЂРЅРѕРіРѕ РѕРєСЂСѓР¶РµРЅРёСЏ РЅР° СЃРІРѕРµР№ Р»РѕРєР°Р»СЊРЅРѕР№ РјР°С€РёРЅРµ
 
-#Комманды:
+!VirtualBox - СЃР°РјР°СЏ РїРѕСЃР»РµРґРЅСЏСЏ С‚РµСЃС‚РѕРІР°СЏ РІРµСЂСЃРёСЏ.
+!Р•СЃР»Рё РЅРµ Р·Р°РїСѓСЃРєР°РµС‚СЃСЏ РІРј РїСЂРё vagrant up - РїРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ С„Р°Р№Р» uxtheme.dll.backup->uxtheme.dll ( C:\Windows\System32 )
+!Р§С‚РѕР±С‹ РїРѕР»СѓС‡РёС‚СЊ ssh РґРѕСЃС‚СѓРї РЅСѓР¶РЅРѕ РєР»СЋС‡ РїСЂРѕРіРЅР°С‚СЊ С‡РµСЂРµР· puttyGen
 
-vagrant init [boxName]          	- инициализировать vagrant [на основе бокса]
-vagrant reload 						- перегрузили вирт.машину с новой конфигурацией	
-vagrant up [boxName]                - поднять вирт.машину.
-vagrant halt [boxName]              - остановить вирт.машину
-vagrant destroy boxID           	- останавливает и удаляет вирт.машину
-vagrant global-status [--prune] 	- информация о всех вирт.машинах [удаляет недействительные окружения]
-vagrant box list                	- список сохраненых боксов
-vagrant box add boxName         	- добавить бокс (ubuntu/trusty64)
-vagrant box remove boxName         	- удалить бокс (ubuntu/trusty64)
-vagrant box update [--box boxName]	- обновляет бокс до актуальной версии
-vagrant plugin install pluginName   - установка дополнительных плагинов
-vagrant ssh      	        		- ssh-соединение с вирт.машиной
-logout           	        		- разорвать ssh-соединение
+#В РљРѕРјРјР°РЅРґС‹:
 
-vagrant sandbox on              	- режим песочницы     (Sahara)
-vagrant sandbox commit 				- сохранили изменения (Sahara)
-vagrant sandbox rollback            - откатили изменения  (Sahara)
-vagrant sandbox off                 - вишли из песочницы  (Sahara) 
+vagrant init [boxName]				- РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ vagrant [РЅР° РѕСЃРЅРѕРІРµ Р±РѕРєСЃР°]
+vagrant reload						- РїРµСЂРµРіСЂСѓР·РёР»Рё РІРёСЂС‚.РјР°С€РёРЅСѓ СЃ РЅРѕРІРѕР№ РєРѕРЅС„РёРіСѓСЂР°С†РёРµР№	
+vagrant up [boxName]                - РїРѕРґРЅВ¤С‚СЊ РІРёСЂС‚.РјР°С€РёРЅСѓ.
+vagrant halt [boxName]              - РѕСЃС‚Р°РЅРѕРІРёС‚СЊ РІРёСЂС‚.РјР°С€РёРЅСѓ
+vagrant destroy boxID           	- РѕСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ Рё СѓРґР°Р»СЏРµС‚ РІРёСЂС‚.РјР°С€РёРЅСѓ
+vagrant global-status [--prune] 	- РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РІСЃРµС… РІРёСЂС‚.РјР°С€РёРЅР°С… [СѓРґР°Р»СЏРµС‚ РЅРµРґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹Рµ РѕРєСЂСѓР¶РµРЅРёСЏ]
+vagrant box list                	- СЃРїРёСЃРѕРє СЃРѕС…СЂР°РЅРµРЅС‹С… Р±РѕРєСЃРѕРІ
+vagrant box add boxName         	- РґРѕР±Р°РІРёС‚СЊ Р±РѕРєСЃ (ubuntu/trusty64)
+vagrant box remove boxName         	- СѓРґР°Р»РёС‚СЊ Р±РѕРєСЃ (ubuntu/trusty64)
+vagrant box update [--box boxName]	- РѕР±РЅРѕРІР»В¤РµС‚ Р±РѕРєСЃ РґРѕ Р°РєС‚СѓР°Р»СЊРЅРѕР№ РІРµСЂСЃРёРё
+vagrant plugin install pluginName   - СѓСЃС‚Р°РЅРѕРІРєР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РїР»Р°РіРёРЅРѕРІ
+vagrant ssh      	        		- ssh-СЃРѕРµРґРёРЅРµРЅРёРµ СЃ РІРёСЂС‚.РјР°С€РёРЅРѕР№
+logout           	        		- СЂР°Р·РѕСЂРІР°С‚СЊ ssh-СЃРѕРµРґРёРЅРµРЅРёРµ
+
+vagrant sandbox on              	- СЂРµР¶РёРј РїРµСЃРѕС‡РЅРёС†С‹     (Sahara)
+vagrant sandbox commit 				- СЃРѕС…СЂР°РЅРёР»Рё РёР·РјРµРЅРµРЅРёВ¤ (Sahara)
+vagrant sandbox rollback            - РѕС‚РєР°С‚РёР»Рё РёР·РјРµРЅРµРЅРёВ¤  (Sahara)
+vagrant sandbox off                 - РІРёС€Р»Рё РёР· РїРµСЃРѕС‡РЅРёС†С‹  (Sahara) 
+
+# РќР°СЃС‚СЂРѕР№РєРё
+
+config.vm.synced_folder "./", "/sync_dir",create:true 		- СЃРёРЅС…СЂРѕРЅРёР·РёСЂРѕРІР°Р»Рё РїР°РїРєСѓ РІР°РіСЂР°РЅС‚Р° СЃ /sync_dir
+config.vm.network "forwarded_port", guest: **, host: **** 	- РїСЂРѕРєРёРЅСѓР»Рё РїРѕСЂС‚
+config.vm.network "private_network", ip: "***.***.***.**"	- Р·Р°РґР°Р»Рё ip
+config.vm.hostname = "*****.*******.***"					- Р·Р°РґР°Р»Рё РёРјСЏ С…РѕСЃС‚Р°

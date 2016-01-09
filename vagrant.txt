@@ -7,28 +7,28 @@
 
 # Комманды:
 
-vagrant init [boxName]				- инициализировать vagrant [на основе бокса]
-vagrant reload						- перегрузили вирт.машину с новой конфигурацией	
+vagrant init [boxName]				      - инициализировать vagrant [на основе бокса]
+vagrant reload						          - перегрузили вирт.машину с новой конфигурацией	
 vagrant up [boxName]                - подн¤ть вирт.машину.
 vagrant halt [boxName]              - остановить вирт.машину
-vagrant destroy boxID           	- останавливает и удаляет вирт.машину
-vagrant global-status [--prune] 	- информация о всех вирт.машинах [удаляет недействительные окружения]
-vagrant box list                	- список сохраненых боксов
-vagrant box add boxName         	- добавить бокс (ubuntu/trusty64)
+vagrant destroy boxID           	  - останавливает и удаляет вирт.машину
+vagrant global-status [--prune] 	  - информация о всех вирт.машинах [удаляет недействительные окружения]
+vagrant box list                	  - список сохраненых боксов
+vagrant box add boxName         	  - добавить бокс (ubuntu/trusty64)
 vagrant box remove boxName         	- удалить бокс (ubuntu/trusty64)
 vagrant box update [--box boxName]	- обновл¤ет бокс до актуальной версии
 vagrant plugin install pluginName   - установка дополнительных плагинов
-vagrant ssh      	        		- ssh-соединение с вирт.машиной
-logout           	        		- разорвать ssh-соединение
+vagrant ssh      	        		      - ssh-соединение с вирт.машиной
+logout           	        		      - разорвать ssh-соединение
 
 vagrant sandbox on              	- режим песочницы     (Sahara)
-vagrant sandbox commit 				- сохранили изменени¤ (Sahara)
-vagrant sandbox rollback            - откатили изменени¤  (Sahara)
-vagrant sandbox off                 - вишли из песочницы  (Sahara) 
+vagrant sandbox commit 				    - сохранили изменени¤ (Sahara)
+vagrant sandbox rollback          - откатили изменени¤  (Sahara)
+vagrant sandbox off               - вишли из песочницы  (Sahara) 
 
 # Настройки
 
-config.vm.synced_folder "./", "/sync_dir",create:true 		- синхронизировали папку вагранта с /sync_dir
+config.vm.synced_folder "./", "/sync_dir",create:true 		  - синхронизировали папку вагранта с /sync_dir
 config.vm.network "forwarded_port", guest: **, host: **** 	- прокинули порт
-config.vm.network "private_network", ip: "***.***.***.**"	- задали ip
-config.vm.hostname = "*****.*******.***"					- задали имя хоста
+config.vm.network "private_network", ip: "***.***.***.**"	  - задали ip
+config.vm.hostname = "*****.*******.***"					          - задали имя хоста
